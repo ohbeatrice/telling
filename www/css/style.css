@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'mean_26_sansregular';
+    src: url('fonts/meansans-webfont.eot');
+    src: url('fonts/meansans-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/meansans-webfont.woff2') format('woff2'), url('fonts/meansans-webfont.woff') format('woff'), url('fonts/meansans-webfont.ttf') format('truetype'), url('fonts/meansans-webfont.svg#mean_26_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'mean_26_sansregular';
+    font-size: 88px;
+    margin-top: -33px;
+    margin-bottom: 10px;
+    
+}
+
+
+#topbar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding: 18px 20px;
+    min-width: 100%;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#topbar .username {
+    float: left;
+    padding-left: 10px;
+}
+
+#topbar .total-score {
+    float: right;
+}
+
+#topbar .user-img {
+    height: 50px;
+    width: 50px;
+    margin-top: -13px;
+    float: left;
+}
+
+#topbar a{
+    color: #fff;
+}
+
+#topbar li {
+    display: inline;
+    margin: 0 8px 0 0;
+    padding: 0 10px 0 0;
+    border-right: 1px solid #FFFFFF;
+}
+
+#topbar li.last {
+    margin-right: 0;
+    padding-right: 0;
+    border: none;
+}
+
+#header {
+    
+}
+
+body {
+    margin: 0px;
+    background-color: #8EADA4;
+    text-align: center;
+}
+
+.maintitle {
+    font-family: 'mean_26_sansregular';
+    font-size: 88px;
+    margin-top: -33px;
+    margin-bottom: 42px;
+}
+
+.mainlogo {
+    width: 50%;
+    max-width: 300px;
+    display: inline;
+    margin: 0;
+}
+
+.fa-sign-out, .fa-sign-in {
+    cursor: pointer;
+    padding-left: 10px;
+    border-left: 1px solid;
+    color: #fff;
+}
+
+.splash-text {
+    font-size: 25px;
+    max-width: 350px;
+    display: inline-block;
+    line-height: normal;
+    padding-top: 10px;
+}
+
+hr {
+    width: 100px;
+}
+
+.login-btns {
+    width: 250px;
+    margin: 0 auto 0 auto;
+}
+/*=======================================
+=            Widget Gradient            =
+=======================================*/
+
+body #a0-lock.a0-theme-default .a0-panel,
+body #a0-widget .a0-panel {
+    background: linear-gradient(120deg, rgba(103, 62, 26, 0.97) 0%, #343a4e 100%);
+    color: white;
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-close:hover,
+body #a0-widget .a0-panel .a0-close:hover {
+    color: #fff;
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-avatar,
+body #a0-widget .a0-panel .a0-avatar {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-avatar i,
+body #a0-widget .a0-panel .a0-avatar i {
+    color: #fff;
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-inputs,
+body #a0-widget .a0-panel .a0-inputs {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-email input,
+body #a0-widget .a0-panel .a0-email input,
+body #a0-lock.a0-theme-default .a0-panel .a0-password input,
+body #a0-widget .a0-panel .a0-password input,
+body #a0-lock.a0-theme-default .a0-panel .a0-repeatPassword input,
+body #a0-widget .a0-panel .a0-repeatPassword input {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-separator,
+body #a0-widget .a0-panel .a0-separator {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body #a0-lock.a0-theme-default .a0-panel button.a0-primary,
+body #a0-widget .a0-panel button.a0-primary {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 100px;
+    width: 80%;
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-btn-small,
+body #a0-widget .a0-panel .a0-btn-small {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-btn-small:hover,
+body #a0-widget .a0-panel .a0-btn-small:hover {
+    border-color: white;
+    background: none;
+}
+
+body #a0-lock.a0-theme-default .a0-panel .a0-footer .a0-logo i,
+body #a0-widget .a0-panel .a0-footer .a0-logo i {
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    body #a0-lock .a0-popup .a0-overlay,
+    body #a0-widget .a0-popup .a0-overlay {
+        background-image: linear-gradient(120deg, rgba(148, 47, 13, 0.97) 0%, rgba(20, 32, 77, 0.6) 100%);
+        background-size: cover;
+        color: white;
+    }
+    body #a0-lock .a0-popup .a0-overlay .a0-panel,
+    body #a0-widget .a0-popup .a0-overlay .a0-panel {
+        background: transparent;
+    }
+}

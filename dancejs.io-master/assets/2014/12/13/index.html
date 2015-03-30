@@ -1,0 +1,326 @@
+<html>
+  <head>
+    <title>DanceJS: a nerdy dance party for the masses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:700,600,400|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ICanHaz.js/0.10.3/ICanHaz.min.js"></script>
+
+  <script id="performer" type="text/html">
+    <div class="performer person">
+      <img src="/images/profiles/{{image}}" />
+      <div class="profile">
+        <h3>{{name}}</h3>
+
+        <p>{{{talk}}}</p>
+
+        {{#track}}
+          <iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{track}}&amp;color=ff5500&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
+        {{/track}}
+      </div>
+
+      <div class="social">
+        {{#twitter}}
+          <a class="fa fa-twitter" href="https://twitter.com/{{twitter}}"></a>
+        {{/twitter}}
+
+        {{#github}}
+          <a class="fa fa-github" href="https://github.com/{{github}}"></a>
+        {{/github}}
+
+        {{#soundcloud}}
+          <a class="fa fa-soundcloud" href="https://soundcloud.com/{{soundcloud}}"></a>
+        {{/soundcloud}}
+      </div>
+
+
+    </div>
+  </script>
+
+    <script id="organizer" type="text/html">
+      <div class="organizer person">
+
+        {{#twitter}}
+          <a href="https://twitter.com/{{twitter}}"><img src="/images/profiles/{{image}}" /></a>
+        {{/twitter}}
+
+        {{^twitter}}
+          <img src="/images/profiles/{{image}}" />
+        {{/twitter}}
+
+        <div class="profile">
+          <h3>{{name}}</h3>
+          <div class="social">
+            {{#twitter}}
+              <a class="fa fa-twitter" href="https://twitter.com/{{twitter}}"></a>
+            {{/twitter}}
+
+            {{#github}}
+              <a class="fa fa-github" href="https://github.com/{{github}}"></a>
+            {{/github}}
+
+            {{#soundcloud}}
+              <a class="fa fa-soundcloud" href="https://soundcloud.com/{{soundcloud}}"></a>
+            {{/soundcloud}}
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script charset="utf-8">
+      window.people = [
+      {
+        name: "Kasima Tharnpipitchai",
+        twitter: "kasima",
+        github: "kasima",
+        track: "161567024",
+        talk: "Kasima, along with the other members of the <a href=\"https://www.kickstarter.com/projects/764304211/anitas-dropship\" target=\"_blank\">Anita's Dropship Kickstarter project</a>, will be giving a talk and interactive demonstration of the Dropship itself.",
+        image: '/dropship/kasima.jpeg'
+      },
+      {
+        name: "C J Silverio",
+        twitter: "ceejbot",
+        github: "ceejbot",
+        soundcloud: "ceejbot",
+        track: "88933260",
+        image: "ceej.png",
+        talk: "Ceej will be kicking off the night's festivities with an ambient DJ set."
+      },
+      {
+        name: "Emily Rose",
+        twitter: "nexxylove",
+        github: "nexxy",
+        image: "nexxy.jpeg",
+        organizer: true
+      }, {
+        name: "Benjamin Coe",
+        twitter: "benjamincoe",
+        github: "bcoe",
+        soundcloud: "benjamin-e-coe",
+        image: "ben.png",
+        track: "168397280",
+        organizer: true
+      }, {
+        name: "Myles Borins",
+        twitter: "The_Alpha_Nerd",
+        github: "TheAlphaNerd",
+        soundcloud: "thealphanerd",
+        image: "myles.jpeg",
+        track: "134658672",
+        organizer: true
+      }, {
+        name: "Gabe Silk",
+        twitter: "gabrielsilk",
+        soundcloud: "gsilk",
+        image: "gabe.jpeg",
+        track: "168505847",
+        talk: "Gabe will be giving a talk on generative music production, leading into the first performance of the night a live-coded DJ set.",
+        organizer: true
+      }, {
+        name: "Mikeal Rogers",
+        twitter: "mikeal",
+        github: "mikeal",
+        soundcloud: "mikealrogers",
+        image: "mikeal.jpeg",
+        organizer: true
+      }, {
+        name: "Adam Ulvi",
+        twitter: "s5fs",
+        github: "aulvi",
+        image: "adam.png",
+        organizer: true
+      }, {
+        name: "Forrest L Norvell",
+        twitter: "othiym23",
+        github: "othiym23",
+        image: "forrest.png",
+        organizer: true
+      }, {
+        name: "James Halliday",
+        twitter: "substack",
+        github: "substack",
+        soundcloud: "substack",
+        image: "substack.jpeg",
+        organizer: true
+      }, {
+        name: "JOHNNY (NHQ)",
+        github: "NHQ",
+        soundcloud: "johnnyscript",
+        image: "johnny.png",
+        track: "135246646",
+        organizer: true
+      }, {
+        name: "Lin Clark",
+        twitter: "linclark",
+        github: "linclark",
+        image: "lin.png",
+        organizer: true
+      }, {
+        name: "Ben Michel",
+        twitter: "obensource",
+        github: "obensource",
+        soundcloud: "benmichelmusic",
+        image: "benm.jpeg",
+        organizer: true
+      }, {
+        name: "Dan Shaw",
+        twitter: "dshaw",
+        github: "dshaw",
+        image: "dan.jpeg",
+        organizer: true
+      }, {
+        name: "Zeke Sikelianos",
+        twitter: "zeke",
+        github: "zeke",
+        image: "zeke.jpeg",
+        organizer: true
+      }]
+
+      $(function () {
+
+        people.forEach(function(person) {
+          if (person.organizer) {
+            $('#organizers-container').append(ich.organizer(person));
+          }
+
+          if (person.talk) {
+            $('#performers-container').append(ich.performer(person));
+          }
+        })
+
+      })
+    </script>
+
+  </head>
+  <body>
+
+    <section id="splash">
+      <div class="container">
+        <a href="https://twitter.com/oaklanddancejs">
+          <img src="/images/logo-white.svg" />
+        </a>
+        <h1>DanceJS</h1>
+        <h2>a nerdy dance party for the masses</h2>
+        <p>Saturday Dec 13th 2014, 6:45PM-11:30PM</p>
+        <p>
+          <a href="http://goo.gl/maps/Zu21t">25th St Collective</a>, Oakland CA
+        </p>
+        <a href="http://oakland.jsfest.com/" class="button">Part of JSFest Oakland, get your tickets</a>
+      </div>
+    </section>
+
+
+    <section id="mission">
+      <div class="content">
+        <p>
+          DanceJS is a unique speaker series that aims to foster
+          a community around audio-hacking and dance music. We hope to encourage unbridled creativity
+          in the Bay Area. Come join us for intriguing talks,
+          and a <a href="https://www.dropbox.com/sh/rysgf68oe0aq7bi/AACxsaIEDJlK94xLZS-Remika?dl=0" target="_blank">killer dance-party</a>. The next event is being held as part of JSFest Oakland at the <a href="http://25thstreetcollective.com/">25th Street Collective</a>.
+        </p>
+      </div>
+    </section>
+
+
+    <section id="performers">
+      <div class="content">
+        <h2>Performers</h2>
+        <div id="performers-container" class="people-container"></div>
+      </div>
+    </section>
+
+    <section id="organizers">
+      <div class="content">
+        <h2>Organizers</h2>
+        <div id="organizers-container" class="people-container"></div>
+      </div>
+    </section>
+
+    <section id="conduct">
+      <div class="content">
+        <h2>Conference Code of Conduct</h2>
+
+        <p>All attendees, performers, sponsors and volunteers at our conference are
+        required to agree with the following code of conduct. Organisers will
+        enforce this code throughout the event. We are expecting cooperation from
+        all participants to help ensuring a safe environment for everybody.</p>
+
+        <p><em>tl;dr: Don't be a jerk</em></p>
+
+        <h3>Need Help?</h3>
+
+        <p>Ben Coe <a href="tel:1-415-314-7891">1-415-314-789</a> <a
+        href="mailto:ben@npmjs.com"> ben@npmjs.com</a></p>
+
+        <h3>The Quick Version</h3>
+
+        <p>Our conference is dedicated to providing a harassment-free conference
+        experience for everyone, regardless of gender, age, sexual orientation,
+        disability, physical appearance, body size, race, or religion (or lack
+        thereof). We do not tolerate harassment of conference participants in any
+        form. Sexual language and imagery is not appropriate for any conference
+        venue, including talks, workshops, parties, Twitter and other online media.
+        Conference participants violating these rules may be sanctioned or expelled
+        from the conference <em>without a refund</em> at the discretion of the
+        conference organisers.</p>
+
+        <h3>The Less Quick Version</h3>
+
+        <p>Harassment includes offensive verbal comments related to gender, age,
+        sexual orientation, disability, physical appearance, body size, race,
+        religion, sexual images in public spaces, deliberate intimidation, stalking,
+        following, harassing photography or recording, sustained disruption of talks
+        or other events, inappropriate physical contact, and unwelcome sexual
+        attention.</p>
+
+        <p>Participants asked to stop any harassing behavior are expected to comply
+        immediately.</p>
+
+        <p>Sponsors are also subject to the anti-harassment policy. In particular,
+        sponsors should not use sexualised images, activities, or other material.
+        Booth staff (including volunteers) should not use sexualised
+        clothing/uniforms/costumes, or otherwise create a sexualised
+        environment.</p>
+
+        <p>If a participant engages in harassing behavior, the conference
+        organisers may take any action they deem appropriate, including warning the
+        offender or expulsion from the conference with no refund.</p>
+
+        <p>If you are being harassed, notice that someone else is being harassed,
+        or have any other concerns, please contact a member of conference staff
+        immediately. Conference staff can be identified as they&#39;ll be wearing
+        branded t-shirts.</p>
+
+        <p>Conference staff will be happy to help participants contact hotel/venue
+        security or local law enforcement, provide escorts, or otherwise assist
+        those experiencing harassment to feel safe for the duration of the
+        conference. We value your attendance.</p>
+
+        <p>We expect participants to follow these rules at conference and workshop
+        venues and conference-related social events.</p>
+      </div>
+    </section>
+
+    <section id="sponsors">
+      <div class="content">
+        <h2>Sponsors</h2>
+        <span class="attribution">Photograph is of Rave.js NodeConf 2014, courtesy of <a href="https://twitter.com/FotoVerite">Matthew Bergman</a></span>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="content">
+        <p>
+          <a href="http://oakland.jsfest.com/" class="button">Part of JSFest Oakland, get your tickets</a>
+        </p>
+        <p class="twitterz">
+          Follow <a href="https://twitter.com/oaklanddancejs">@oaklanddancejs</a>
+        </p>
+      </div>
+    </section>
+
+  </body>
+</html>

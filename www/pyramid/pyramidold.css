@@ -1,0 +1,157 @@
+/*Drag-able formating section*/
+ul { 
+   list-style-type: none;
+   height: auto; 
+   width: 49%;
+   overflow: auto;
+   margin: auto;
+   position: static;
+ /*  background: grey;
+   outline: green solid thick;*/
+   top: 0; left: 0; bottom: 0; right: 0;
+}
+li {
+   margin: 3px 3px 3px 0;
+   padding: 1px; 
+   float: left; 
+   width: 120px;
+   height: auto;
+   text-align: center;
+   font-size: 20px;
+}
+/*Simple formating section*/
+body{
+  text-align: center;
+  display: inline;
+  background-color: #70A05E;
+}
+punc{
+  font-size: 20px;
+  color: white;
+  position: static;
+}
+
+philoName{
+text-align: right;
+font-size: 25px;
+color: white;
+}
+
+container{
+  display: block;
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  align: left;
+}
+
+buttonTable{
+  display: table;
+  width: auto;
+  margin: auto;
+  align:left;
+}
+
+inline{
+  display: inline-block;
+  margin-right: 75%;
+}
+
+inlineBottom{
+  display: inline-block;
+  margin-right: 40%;
+}
+/*Button Formating Section*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+$red:   #E0645C;
+$dark:  #444444;
+$light: #999999;
+$blue:  #2DB6CF;
+$green: #46b98a;
+$white: #FFFFFF;
+
+$arial: Arial,sans-serif;
+$font-face: 'Open Sans', sans-serif;
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-face;
+  font-size: 27px;
+  color: $white;
+  font-weight: 700;
+  span {
+    font-weight: 400;
+  }
+}
+button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 7px 10px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 16.795%; /* auto */
+  text-align: center; /* DELETE WHEN WIDTH AUTO */
+  &.red {
+    background: none repeat scroll 0 0 $red;
+    color: $white;
+    &:hover {
+      background: none repeat scroll 0 0 $light;
+      color: $white;
+    }
+  }
+  &.dark {
+    background: none repeat scroll 0 0 $dark;
+    color: $white;
+    &:hover {
+      background: none repeat scroll 0 0 $blue;
+      color: $white;
+    }
+  }
+  &.light {
+    background: none repeat scroll 0 0 $light;
+    color: $white;
+    &:hover {
+      background: none repeat scroll 0 0 $dark;
+      color: $white;
+    }
+  }
+  &.green {
+    background: none repeat scroll 0 0 $green;
+    color: $white;
+    &:hover {
+      background: none repeat scroll 0 0 $dark;
+      color: $white;
+    }
+  }
+  &.help {
+    width:110px;
+    margin-right: 3px;
+    background: none repeat scroll 0 0 $dark;
+    color: $white;
+    &:hover {
+      background: none repeat scroll 0 0 $light;
+      color: $white;
+    }
+  }
+  &.blue {
+    background: none repeat scroll 0 0 $blue;
+    color: $white;
+    &:hover {
+      background: none repeat scroll 0 0 $dark;
+      color: $white;
+    }
+  }
+}

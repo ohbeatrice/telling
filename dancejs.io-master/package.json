@@ -1,0 +1,24 @@
+{
+  "name": "dancejs.io",
+  "version": "1.0.0",
+  "description": "Website for DanceJS.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcoe/dancejs.io.git"
+  },
+  "keywords": [
+    "dance",
+    "rave",
+    "music",
+    "funtastic"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcoe/dancejs.io/issues"
+  },
+  "homepage": "https://github.com/bcoe/dancejs.io",
+  "dependencies": {
+    "restify": "^2.8.2"
+  }
+}

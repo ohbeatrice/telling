@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Telling</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js">
+
+    <!-- IF using Sass (run gulp sass first), then remove the CSS include above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+<ion-view title="" id="welcome-view" hide-nav-bar="true">
+  <body ng-app="telling">
+      
+      <ion-content class="has-header">
+          
+        <img src="img/logo.svg" class="mainlogo">
+        <h1>Telling</h1>
+          <HR>
+        <p class="splash-text">Hello. <b>Telling</b> let’s you be a journalist and tell your community’s story. </p>
+          <HR>
+<div class="login-btns">
+    <ul>
+        <li ng-click="fbLogin()">
+        <span class="ifacebook">
+<img src="img/fb.svg">
+          </span>
+        
+        </li>
+        
+<li ng-click="gplusLogin()"><span class="igoogleplus"><img src="img/google.svg">
+</span></li>
+    
+    </ul>
+              
+              </div>              
+              
+              
+      </ion-content>
+    
+  </body>
+</html>
