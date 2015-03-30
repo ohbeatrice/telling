@@ -1,12 +1,16 @@
-Ionic App Base
+Telling
 
-A starting project for Ionic that optionally supports using custom SCSS.
+An introduction to the principles and ethics of journalism
 
-## Using this project
+## Using this app
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+This app is a series of tools, games and resources that can help any one become a journalist. Journalism serves an important role in our society and everyone should feel the have the ability to report on issues that are important to them. You can use Telling to become a journalist and let your voice be heard. 
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+To run telling on your own local server.
+
+Install NodeJS
+
+Install ionic
 
 ```bash
 $ npm install -g ionic
@@ -15,13 +19,10 @@ $ npm install -g ionic
 Then run:
 
 ```bash
-$ ionic start myProject tabs
+$ ionic serve
 ```
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
-
-# telling
-Telling App
+to run the pyramid gam point to the pyramid directory and run: 
+```bash
+$ node pyramidServer.js
+```
