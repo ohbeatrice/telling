@@ -1,0 +1,22 @@
+
+    
+    <h1>{{profile.name}}</h1>
+<img src="{{profile.picture}}"/>
+    <span>{{profile.rank}}</span>
+    <span>{{profile.school}}</span>
+    
+    <h2>Recent Stories</h2>
+    <ul>
+        <li ng-repeat="story in userStories">
+            <h3>{{story.headline}}</h3>
+            <span>{{story.lead}}</span>
+        </li>
+    </ul>
+    <h2>Favorite Sources</h2>
+    <ul>
+        <li>BBC</li>
+        <li>Huffington Post</li>
+        <li>Wikipedia</li>
+    </ul>
+    <h2>Favorite Games</h2>
+    <a href="/#/pyramid">PYRAMID</a>

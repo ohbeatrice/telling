@@ -20,20 +20,30 @@ telling = angular.module('telling', ['ngRoute', 'auth0', 'angular-jwt', 'angular
     
     $routeProvider
     .when('/', {
-        templateUrl: 'home.html',
+        templateUrl: 'html/home.html',
         controller: 'HomeCtrl',
     })
     .when('/welcome', {
-        templateUrl: 'welcome.html',
+        templateUrl: 'html/welcome.html',
         controller: 'WelcomeCtrl'
     })
     .when('/profile', {
-        templateUrl: 'profile.html',
+        templateUrl: 'html/profile.html',
         controller: 'ProfileCtrl'
       })
     .when('/pyramid', {
-        templateUrl: 'pyramid.html',
+        templateUrl: 'html/pyramid.html',
         controller: 'PyramidCtrl'
+      })
+    
+    .when('/reportingtools', {
+        templateUrl: 'html/reportingtools.html',
+        controller: 'ReportingCtrl'
+        
+         })
+        
+    .when('/audiorecord', {
+        templateUrl: 'html/audiorecord.html',
       });
 
     authProvider.init({
@@ -52,7 +62,6 @@ telling.controller('MainCtrl',[ 'store', '$scope', '$location', '$rootScope', 'a
     $rootScope.token = store.get('token');
     if ($rootScope.token == null) 
         $rootScope.login = false;
-    console.log($rootScope.profile, $rootScope.token);
     $scope.logIn = function () {
         window.location = 'http://localhost:8100'
     }
@@ -92,7 +101,9 @@ telling.controller('ProfileCtrl',[ 'store', '$scope', function(store, $scope) {
         
 }]);
 
-telling.controller("PyramidCtrl", function($scope, $http){
+
+
+telling.controller("PyramidCtrl", function($scope, $http, $sce){
     //CREATE THE SCOPE TO HOLD THE IMPORTANT EVENTS, STORY, RESULTS, TEST AND ANSWER 
     $scope.events=[];
     $scope.story="";
@@ -105,7 +116,7 @@ telling.controller("PyramidCtrl", function($scope, $http){
     //GET A RANDOM STORY
     $http.get('http://localhost:3000')
         .success(function(data) {
-            $scope.story = data[0].text;
+            $scope.story = $sce.trustAsHtml(data[0].text);
             $scope.result = data[0].result;
             $scope.hint = data[0].hint;
             //get the events with this story id

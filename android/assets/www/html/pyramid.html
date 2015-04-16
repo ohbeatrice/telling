@@ -1,0 +1,56 @@
+
+<head>
+    <!-- Sortable.js -->
+    <script src="http://rubaxa.github.io/Sortable/Sortable.js"></script>
+
+    <!-- Main Pyramid js -->
+    <script src="pyramid/js/app.js"></script>
+
+    <!-- Ionic+Bootstrap -->
+    <link href="css/style.css"   rel="stylesheet">
+    <link href="pyramid/css/pyramid.css" rel="stylesheet">
+    <link href="pyramid/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="pyramid/css/animate.min.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Montserrat:400,700|Roboto:100' rel='stylesheet' type='text/css'>
+
+</head>
+<div>
+    
+    <!-- How To -->
+    <div class="howto" >
+        <h1 class="animated fadeIn">HOW TO PLAY</h1>
+        <hr color="#a5c2ea" size="1" width="5%">
+        <div class="animated fadeIn">
+            <p>Read/watch the story</p>
+            <p>Look for the most important thing</p>
+            <p>Drag and drop events in order of importance</p>
+        </div>
+        <hr color="#a5c2ea" size="1" width="5%">
+    </div>
+    </div>
+
+ <!-- Clouds -->
+    <div id="clouds">
+	<div class="cloud x1"></div>
+	<!-- Time for multiple clouds to dance around -->
+	<div class="cloud x2"></div>
+	<div class="cloud x3"></div>
+	<div class="cloud x4"></div>
+	<div class="cloud x5"></div>
+    </div>
+<!-- Thats the markup! -->
+    <div class="story" ng-bind-html="story" ng-hide="questions"></div>
+    <button ng-click="questions = true" ng-hide="questions">Play the Game</button>
+    <ul id="items" ng-show="questions">
+        <li id="ev1"><span>{{ev1.text}}</span>
+        </li>
+        <li id="ev2"><span>{{ev2.text}}</span>
+        </li>
+        <li id="ev3"><span>{{ev3.text}}</span>
+        </li>
+    </ul>
+    <div id="submit" ng-click="go()" ng-show="questions"><span>GO</span>
+    </div>
+    <span id="results" ng-show="submit">{{message}}</span>
+</div>
