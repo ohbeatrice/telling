@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F5335AB9-F018-4784-A435-9917E52D089C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloCordova</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>90D7201E6FAF96253C47C9FBD021278E9715220C</key>
+		<string>https://github.com/ohbeatrice/telling.git</string>
+		<key>A0DC98819ADF16EB9D6FAE0ECCA8E7FF0633E9CF</key>
+		<string>https://github.com/RubaXa/Sortable.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/HelloCordova.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>90D7201E6FAF96253C47C9FBD021278E9715220C</key>
+		<string>../../..</string>
+		<key>A0DC98819ADF16EB9D6FAE0ECCA8E7FF0633E9CF</key>
+		<string>../../..ios/www/pyramid/Sortable/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ohbeatrice/telling.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>90D7201E6FAF96253C47C9FBD021278E9715220C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>90D7201E6FAF96253C47C9FBD021278E9715220C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>myApp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A0DC98819ADF16EB9D6FAE0ECCA8E7FF0633E9CF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Sortable</string>
+		</dict>
+	</array>
+</dict>
+</plist>
